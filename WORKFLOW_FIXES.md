@@ -26,6 +26,6 @@ What I prepared on the branch
 
 Next steps I can take once you confirm the admin changes or add secrets
 - Open a follow-up PR to update workflows to pinned actions and pre-flight checks
-- Re-run workflows and fix any remaining job-level errors
+- Re-run the failing workflows and fix any remaining job-level errors
 
 If you want me to proceed to create a PR with workflow changes, confirm and I will prepare the exact workflow edits.
