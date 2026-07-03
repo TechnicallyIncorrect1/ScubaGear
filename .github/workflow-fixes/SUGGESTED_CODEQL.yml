@@ -1,0 +1,28 @@
+# Suggested CodeQL workflow (SUGGESTED_CODEQL.yml)
+
+# Place this content in your branch under .github/workflow-fixes as a suggested replacement or reference.
+# This file is a minimal suggestion to reduce auto-detection issues; do NOT merge blindly without review.
+
+name: "CodeQL — Suggested Minimal"
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    permissions:
+      security-events: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Initialize CodeQL (explicit languages)
+        uses: github/codeql-action/init@v4
+        with:
+          languages: javascript-typescript
+          build-mode: none
+
+      - name: Perform CodeQL Analysis
+        uses: github/codeql-action/analyze@v4
