@@ -7,11 +7,15 @@ on:
     branches: [ main, master ]
   workflow_dispatch:
 
+# Minimal permissions block — prevents unexpected permission-related startup failures
+permissions:
+  contents: read
+
 jobs:
   status:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v3
       - name: Repository status
         run: |
           echo "MELISA / repo CI is healthy"
